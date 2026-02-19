@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoNVision AI | Live Product Demo</title>
+    <meta
+      name="description"
+      content="Try CoNVision AI's clinic MVP and patient follow-up MVP directly in an interactive live demo environment."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="demo-page has-prototype-banner">
+    <div class="background-ornament" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/conv-logo.svg" alt="CoNVision AI logo" />
+        <span>CoNVision AI</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#demo">Demo Lab</a>
+        <a href="index.html#solution">Solution</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="disclaimer.html">Medical Disclaimer</a>
+      </nav>
+      <a class="btn solid" href="index.html">Back to website</a>
+    </header>
+
+    <main class="demo-main" id="demo">
+      <section class="section reveal demo-intro">
+        <p class="eyebrow">Interactive demo</p>
+        <h1>Try both product MVPs directly inside this page.</h1>
+        <p class="lead">
+          Start with the main clinic software MVP for doctors, then explore the patient follow-up smartphone MVP as an additional module. Both demos run live below.
+        </p>
+      </section>
+
+      <section class="section card reveal demo-shell">
+        <div class="demo-tabs" role="tablist" aria-label="MVP demo selection">
+          <button class="demo-tab active" type="button" role="tab" aria-selected="true" aria-controls="clinic-panel" data-target="clinic-panel">
+            Clinic MVP
+          </button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" aria-controls="followup-panel" data-target="followup-panel">
+            Follow-up MVP
+          </button>
+        </div>
+
+        <section id="clinic-panel" class="demo-panel" role="tabpanel">
+          <p class="caption">
+            End-to-end doctor workflow: patient list, scan history, upload, analysis simulation, result metrics, and timeline update.
+          </p>
+          <div class="demo-toolbar">
+            <button class="btn ghost demo-reset" type="button" data-frame="clinic-frame">Restart clinic demo</button>
+          </div>
+          <div class="imac-shell">
+            <div class="imac-screen">
+              <iframe
+                id="clinic-frame"
+                title="CoNVision AI Clinic MVP demo"
+                data-base-src="clinic-demo/index.html"
+                src="clinic-demo/index.html"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="imac-stand" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section id="followup-panel" class="demo-panel" role="tabpanel" hidden>
+          <p class="caption">
+            Mobile patient journey: secure invite, verification, consent, eye capture guidance, quality gate, secure upload, and status.
+          </p>
+          <div class="demo-toolbar">
+            <button class="btn ghost demo-reset" type="button" data-frame="followup-frame">Restart follow-up demo</button>
+          </div>
+          <div class="iphone-shell">
+            <div class="iphone-notch" aria-hidden="true"></div>
+            <div class="iphone-screen">
+              <iframe
+                id="followup-frame"
+                title="CoNVision AI Follow-up MVP demo"
+                data-base-src="followup-demo/index.html"
+                src="followup-demo/index.html"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>AI tool to detect and measure eye blood vessel disease from clinical eye images.</p>
+      <nav class="footer-links" aria-label="Legal links">
+        <a href="impressum.html">Legal Notice</a>
+        <a href="datenschutz.html">Privacy Policy</a>
+        <a href="disclaimer.html">Medical Disclaimer</a>
+      </nav>
+    </footer>
+
+    <div class="prototype-banner" role="note" aria-label="Prototype disclaimer">
+      <p>
+        Prototype / Demo: This website shows a concept of CoNVision AI. Not a medical device. Not for clinical use or diagnosis.
+        <a href="disclaimer.html">Medical Disclaimer</a>
+      </p>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
